@@ -14,12 +14,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    ProgrammerService.fetchProgrammers()
+    ProgrammerService.fetchProgrammers().then(programmers => this.setState({ programmers }
+
+    ))
   }
 
   render() {
     return (
-      <Programmers programmers={programmers}/>
+      <Programmers programmers={this.state.programmers}/>
     );
   }
 }
