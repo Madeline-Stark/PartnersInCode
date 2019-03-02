@@ -4,7 +4,7 @@ const ProgrammerService = {
   fetchProgrammers() {
     return fetch(`${API_URL}/programmers`)
       .then(response => response.json())
-  }
+  },
 
   createProgrammer(programmer) {
     const request = {
