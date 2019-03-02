@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Programmers from './components/Programmers';
+import AddProgrammer from './components/AddProgrammer'
 import ProgrammerService from './services/ProgrammerService';
 import './App.css';
 
@@ -27,8 +28,10 @@ class App extends Component {
 
   render() {
     return (
+      <div>
       <Programmers programmers={this.state.programmers}/>
-      <AddProgrammer addMovie={this.addMovie}/>
+      <AddProgrammer addProgrammer={this.addProgrammer}/>
+      </div>
     );
   }
 }
