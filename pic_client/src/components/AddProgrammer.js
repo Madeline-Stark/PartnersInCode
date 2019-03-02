@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //use class b/c form
-class AddProgrammer extends Compnent {
+class AddProgrammer extends Component {
   constructor(props) { //need to pass down props
     super(props)
 
@@ -19,44 +19,53 @@ class AddProgrammer extends Compnent {
     })
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault();
+    const programmer = this.state;
+    this.props.addProgrammer(programmer)
+    this.setState({ //reset state
+      name: '',
+      languages: '',
+      time_zone: '',
+      email: ''
+    })
+  }
+
   render() {
     return (
       <form onSubmit={this.handleOnSubmit}>
 
-        <label htmlFor="programmer_name">Name</label>
         <input
           type="text"
           name="title"
           value={this.state.name}
           onChange={this.handleOnChange}
-          placeholder="Programmer Name"
+          placeholder="Your Name"
           />
 
-          <label htmlFor="programmer_languages">Languages</label>
+
           <input
             type="text"
             name="languages"
             value={this.state.languages}
             onChange={this.handleOnChange}
-            placeholder="Programmer Languages"
+            placeholder="Programming Languages"
             />
 
-            <label htmlFor="programmer_time_zone">Time Zone</label>
             <input
               type="text"
               name="title"
               value={this.state.time_zone}
               onChange={this.handleOnChange}
-              placeholder="Programmer Time Zone"
+              placeholder="Your Time Zone"
               />
 
-              <label htmlFor="programmer_email">Email</label>
               <input
                 type="text"
                 name="email"
                 value={this.state.email}
                 onChange={this.handleOnChange}
-                placeholder="Programmer Email"
+                placeholder="Your Email"
                 />
 
                 <button>Add Yourself to the Registry</button>
