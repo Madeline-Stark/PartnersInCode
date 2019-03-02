@@ -19,9 +19,16 @@ class App extends Component {
     ))
   }
 
+  addProgrammer = programmer => {
+    ProgrammerService.createProgrammer(programmer).then(programmer => this.setState({
+      programmers: this.state.programmers.concat(programmer)
+    }))
+  }
+
   render() {
     return (
       <Programmers programmers={this.state.programmers}/>
+      <AddProgrammer addMovie={this.addMovie}/>
     );
   }
 }
