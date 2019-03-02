@@ -35,7 +35,9 @@ class AddProgrammer extends Component {
     return (
       <form onSubmit={this.handleOnSubmit}>
 
-        <label for="name">Your Name</label>
+      <h3>Add Yourself to the Registry:</h3>
+
+        <label for="name">Your Name </label>
         <input
           type="text"
           name="name"
@@ -43,8 +45,9 @@ class AddProgrammer extends Component {
           onChange={this.handleOnChange}
           placeholder="Your Name"
           />
+          <br />
 
-          <label for="languages">Programming Languages</label>
+          <label for="languages">Programming Languages </label>
           <input
             type="text"
             name="languages"
@@ -52,8 +55,9 @@ class AddProgrammer extends Component {
             onChange={this.handleOnChange}
             placeholder="Programming Languages"
             />
+            <br />
 
-            <label for="time_zone">Your Time Zone</label>
+            <label for="time_zone">Your Time Zone </label>
             <input
               type="text"
               name="time_zone"
@@ -61,8 +65,9 @@ class AddProgrammer extends Component {
               onChange={this.handleOnChange}
               placeholder="Your Time Zone"
               />
+              <br />
 
-              <label for="email">Your Email</label>
+              <label for="email">Your Email </label>
               <input
                 type="text"
                 name="email"
@@ -70,8 +75,9 @@ class AddProgrammer extends Component {
                 onChange={this.handleOnChange}
                 placeholder="Your Email"
                 />
+                <br />
 
-                <button>Add Yourself to the Registry</button>
+                <input type="submit" />
       </form>
     )
   }
