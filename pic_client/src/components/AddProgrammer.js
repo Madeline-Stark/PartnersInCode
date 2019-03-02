@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-//use class b/c form
+
 class AddProgrammer extends Component {
-  constructor(props) { //need to pass down props
+  constructor(props) {
     super(props)
 
     this.state = {
@@ -9,13 +9,13 @@ class AddProgrammer extends Component {
       languages: '',
       time_zone: '',
       email: ''
-    }
+    };
   }
 
-  handleOnChange = event => { //tracks how state is changing-even before submit
+  handleOnChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value //name of property equal to value of property
+      [name]: value
     })
   }
 
@@ -23,7 +23,7 @@ class AddProgrammer extends Component {
     event.preventDefault();
     const programmer = this.state;
     this.props.addProgrammer(programmer)
-    this.setState({ //reset state
+    this.setState({ 
       name: '',
       languages: '',
       time_zone: '',
