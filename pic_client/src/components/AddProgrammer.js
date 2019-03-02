@@ -8,7 +8,7 @@ class AddProgrammer extends Component {
       name: '',
       languages: '',
       time_zone: '',
-      email: ''
+      email: '',
     };
   }
 
@@ -23,7 +23,7 @@ class AddProgrammer extends Component {
     event.preventDefault();
     const programmer = this.state;
     this.props.addProgrammer(programmer)
-    this.setState({ 
+    this.setState({
       name: '',
       languages: '',
       time_zone: '',
