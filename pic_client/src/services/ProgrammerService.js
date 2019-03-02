@@ -9,9 +9,12 @@ const ProgrammerService = {
   createProgrammer(programmer) {
     const request = {
       method: 'POST',
-      body: JSON.stringify(programmer),
-      contentType: 'application/json',
-      accepts: 'application/json'
+      body: JSON.stringify({
+        programmer: programmer
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      }
     }
 
     return fetch(`${API_URL}/programmers`, request)
