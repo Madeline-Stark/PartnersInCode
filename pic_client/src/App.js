@@ -29,6 +29,8 @@ class App extends Component {
   render() {
     return (
       <div>
+      <h1>Partners in Code</h1>
+      <p>Find your pair programming match!</p>
       <Programmers programmers={this.state.programmers}/>
       <AddProgrammer addProgrammer={this.addProgrammer}/>
       </div>

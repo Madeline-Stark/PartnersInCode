@@ -13,7 +13,7 @@ class AddProgrammer extends Component {
   }
 
   handleOnChange = event => {
-    const { name, value } = event.target;
+    const { name, value } = event.target; //returns element that triggered event
     this.setState({
       [name]: value
     })
@@ -23,11 +23,11 @@ class AddProgrammer extends Component {
     event.preventDefault();
     const programmer = this.state;
     this.props.addProgrammer(programmer)
-    this.setState({
+    this.setState({ //clears form
       name: '',
       languages: '',
       time_zone: '',
-      email: ''
+      email: '',
     })
   }
 
