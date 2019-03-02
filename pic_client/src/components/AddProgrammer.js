@@ -35,15 +35,16 @@ class AddProgrammer extends Component {
     return (
       <form onSubmit={this.handleOnSubmit}>
 
+        <label for="name">Your Name</label>
         <input
           type="text"
-          name="title"
+          name="name"
           value={this.state.name}
           onChange={this.handleOnChange}
           placeholder="Your Name"
           />
 
-
+          <label for="languages">Programming Languages</label>
           <input
             type="text"
             name="languages"
@@ -52,14 +53,16 @@ class AddProgrammer extends Component {
             placeholder="Programming Languages"
             />
 
+            <label for="time_zone">Your Time Zone</label>
             <input
               type="text"
-              name="title"
+              name="time_zone"
               value={this.state.time_zone}
               onChange={this.handleOnChange}
               placeholder="Your Time Zone"
               />
 
+              <label for="email">Your Email</label>
               <input
                 type="text"
                 name="email"
