@@ -3,6 +3,7 @@ import Programmers from './Programmers';
 import './App.css';
 import About from '../components/about';
 import Title from '../components/title';
+import Resources from '../components/resources';
 
 
 
@@ -14,6 +15,7 @@ class App extends Component {
       <Title />
       <About />
       <Programmers />
+      <Resources />
       </div>
     );
   }
