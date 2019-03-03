@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
       <h1>Partners in Code</h1>
       <p>Find your pair programming match!</p>
-      <Programmers programmers={this.state.programmers}/>
+      <Programmers />
       </div>
     );
   }
