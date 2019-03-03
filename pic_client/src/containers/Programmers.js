@@ -15,6 +15,13 @@ class Programmers extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'GET_PROGRAMMER_SUCCESS',
+      programmers: []
+    })
+  }
+
   const mapStateToProps = (state) => {
     return ({
       programmers: state.programmers
