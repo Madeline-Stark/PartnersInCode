@@ -32,18 +32,24 @@ const successfullyAddProgrammer = programmer => {
 
 export const fetchProgrammers = () => {
   return dispatch => {
+    dispatch(makeFetchRequest())
     ProgrammerService.fetchProgrammers()
       .then(programmers => {
+        dispatch(finishFetchRequest())
         dispatch(successfullyGetProgrammers(programmers))
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        dispatch(unsuccessfulFetchRequest())
+      });
   }
 }
 
 export const addProgrammer = programmer => {
   return dispatch => {
+    dispatch(makeFetchRequest());
     ProgrammerService.createProgrammer(programmer)
       .then(programmer => {
+        dispatch(finishFetchRequest());
         dispatch(successfullyAddProgrammer(programmer));
       })
       .catch(error => console.log(error));
