@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateProgrammerFormData } from '../actions/programmerForm';
-import { createProgrammer } from '../actions/programmers';
+import { addProgrammer } from '../actions/programmers';
 
 class AddProgrammer extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      name: '',
+      email: '',
+      languages: '',
+      time_zone: '',
+    }
+  }
 
   handleOnChange = event => {
     const { name, value } = event.target; //returns element that triggered event
