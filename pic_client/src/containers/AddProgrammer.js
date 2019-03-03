@@ -16,17 +16,36 @@ class AddProgrammer extends Component {
     }
   }
 
+  // handleOnChange = event => {
+  //   const { name, value } = event.target; //returns element that triggered event
+  //   const currentProgrammerFormData = Object.assign({}, this.props.addProgrammerData, {
+  //     [name]: value
+  //   })
+  //   this.props.updateProgrammerFormData(currentProgrammerFormData)
+  // }
+
   handleOnChange = event => {
-    const { name, value } = event.target; //returns element that triggered event
-    const currentProgrammerFormData = Object.assign({}, this.props.addProgrammerData, {
+    const { name, value } = event.target;
+    this.setState({
       [name]: value
     })
-    this.props.updateProgrammerFormData(currentProgrammerFormData)
   }
+
+  // handleOnSubmit = event => {
+  //   event.preventDefault();
+  //   this.props.addProgrammer(this.props.addProgrammerData)
+  // }
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.addProgrammer(this.props.addProgrammerData)
+    const programmer = this.state;
+    this.props.addProgrammer(programmer)
+    this.setState({
+      name: '',
+      email: '',
+      languages: '',
+      time_zone: '',
+    })
   }
 
   render() {
