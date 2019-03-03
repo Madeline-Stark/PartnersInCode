@@ -14,14 +14,11 @@ class Programmers extends Component {
       </div>
     );
     }
-  }
+  };
 
   componentDidMount() {
-    // this.props.dispatch({
-    //   type: 'GET_PROGRAMMER_SUCCESS',
-    //   programmers: []
-    // })
-  }
+    this.props.getProgrammers();
+  };
 
   const mapStateToProps = (state) => {
     return ({

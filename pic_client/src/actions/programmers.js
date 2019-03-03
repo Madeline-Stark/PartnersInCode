@@ -9,11 +9,11 @@ const setPogrammers = programmers => {
 }
 // Async actions
 
-const getProgrammers = () => {
-  dispatch => {
+export const getProgrammers = () => {
+  return dispatch => {
     return fetch(`${API_URL}/programmers`)
       .then(response => response.json())
-      .then(programmers => dispatch(setPogrammers))
+      .then(programmers => dispatch(setPogrammers(programmers)))
       .catch(error => console.log(error));
   }
 }
