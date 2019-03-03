@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProgrammerCard from '../components/ProgrammerCard';
 import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
 import { getProgrammers } from '../actions/programmers';
@@ -11,9 +10,21 @@ class Programmers extends Component {
   }
 
   render() {
+    console.log(this.props.getProgrammers())
+
+    const renderProgrammers = this.props.programmers.map(programmer =>
+      <div key={programmer.id}>
+        <p>{programmer.name}</p>
+        <p>Languages: {programmer.languages}</p>
+        <p>Time Zone: {programmer.time_zone}</p>
+        <p>Email: {programmer.email}</p>
+      </div>
+      )
+
     return (
       <div>
-        {this.props.programmers.map(programmer => <ProgrammerCard key={programmer.id} programmer={programmer} />)}
+        <h3>Programmers Looking to Pair:</h3>
+        {renderProgrammers}
         <AddProgrammer />
       </div>
     );
