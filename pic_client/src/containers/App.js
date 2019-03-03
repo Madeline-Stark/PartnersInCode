@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Programmers from './Programmers';
-import AddProgrammer from './AddProgrammer'
-//import ProgrammerService from '../services/ProgrammerService';
 import './App.css';
 
 

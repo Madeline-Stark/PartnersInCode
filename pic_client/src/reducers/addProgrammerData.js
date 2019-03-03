@@ -1,13 +1,19 @@
-export default (state = {
+const initialState = {
   name: '',
   languages: '',
   time_zone: '',
-  email: '',
-}, action) => {
+  email: ''
+}
+
+
+export default (state = initialState, action) => {
 
   switch(action.type) {
     case 'UPDATED DATA':
-      return action.addProgrammerData
+      return action.addProgrammerData;
+
+      case 'RESET_PROGRAMMER_FORM':
+        return initialState;
 
     default:
       return state;

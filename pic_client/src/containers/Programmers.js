@@ -14,7 +14,7 @@ class Programmers extends Component {
     return (
       <div>
         {this.props.programmers.map(programmer => <ProgrammerCard key={programmer.id} programmer={programmer} />)}
-        <AddProgrammer addProgrammer={this.addProgrammer}/>
+        <AddProgrammer />
       </div>
     );
     }
@@ -27,7 +27,7 @@ class Programmers extends Component {
     })
   }
 
-  
+
 
 
 
