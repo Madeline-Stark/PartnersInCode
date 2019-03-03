@@ -43,7 +43,7 @@ before_action :set_programmer, only: [:show, :update, :destroy]
   end
 
   def programmer_params
-    params.require(:programmer).permit(:name, :email, :languages, :time_zone)
+    params.require(:programmer).permit(:name, :email, :languages, :time_zone, :img_url)
   end
 
 end
