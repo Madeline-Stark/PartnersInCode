@@ -12,13 +12,16 @@ class Programmers extends Component {
   render() {
 
     const renderProgrammers = this.props.programmers.map(programmer =>
-      <div key={programmer.id}>
-        <p>{programmer.name}</p>
-        <p>Languages: {programmer.languages}</p>
-        <p>Time Zone: {programmer.time_zone}</p>
-        <p>Email: {programmer.email}</p>
-      </div>
+      <p key={programmer.id}>
+        {programmer.name}
+        {programmer.languages}
+        {programmer.time_zone}
+        {programmer.email}
+        <span onClick={() => this.props.deleteProgrammer(programmer.id)}>Delete</span>
+      </p>
       )
+
+      console.log(this)
 
     return (
       <div>
