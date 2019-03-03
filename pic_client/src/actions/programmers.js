@@ -44,5 +44,6 @@ export const createProgrammer = programmer => {
         dispatch(addProgrammer(programmer))
         dispatch(resetProgrammerForm())
       })
+      .catch(error => console.log(error))
   }
 }
