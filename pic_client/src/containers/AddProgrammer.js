@@ -100,7 +100,7 @@ class AddProgrammer extends Component {
     )
   }
 }
-
+//need map state to props?
 const mapStateToProps = state => {
   return {
     addProgrammerData: state.addProgrammerData
@@ -109,5 +109,5 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {
   updateProgrammerFormData,
-  createProgrammer
+  addProgrammer
 })(AddProgrammer);
