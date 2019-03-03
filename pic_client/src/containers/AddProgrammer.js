@@ -5,21 +5,15 @@ class AddProgrammer extends Component {
 
   handleOnChange = event => {
     const { name, value } = event.target; //returns element that triggered event
-    this.setState({
+    const currentProgrammerFormData = Object.assign({}, this.props.addProgrammerData, {
       [name]: value
     })
+    this.props.updateProgrammerFormData(currentProgrammerFormData)
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
-    const programmer = this.state;
-    this.props.addProgrammer(programmer)
-    this.setState({ //clears form
-      name: '',
-      languages: '',
-      time_zone: '',
-      email: '',
-    })
+    this.props.addProgrammer(this.props.addProgrammerData)
   }
 
   render() {
