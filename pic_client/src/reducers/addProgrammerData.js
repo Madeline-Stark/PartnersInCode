@@ -5,7 +5,7 @@ export default (state = {
   email: '',
 }, action) => {
 
-  switch(action.type) => {
+  switch(action.type) {
     case 'UPDATED DATA':
       return action.addProgrammerData
 

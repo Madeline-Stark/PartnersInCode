@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class AddProgrammer extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      name: '',
-      languages: '',
-      time_zone: '',
-      email: '',
-    };
-  }
+  // constructor(props) {
+  //   super(props)
+  //
+  //   this.state = {
+  //     name: '',
+  //     languages: '',
+  //     time_zone: '',
+  //     email: '',
+  //   };
+  // }
 
   handleOnChange = event => {
     const { name, value } = event.target; //returns element that triggered event
@@ -32,46 +33,47 @@ class AddProgrammer extends Component {
   }
 
   render() {
+    const { name, languages, time_zone, email } = this.props.addProgrammerData
     return (
       <form onSubmit={this.handleOnSubmit}>
 
       <h3>Add Yourself to the Registry:</h3>
 
-        <label for="name">Your Name </label>
+        <label htmlFor="name">Your Name </label>
         <input
           type="text"
           name="name"
-          value={this.state.name}
+          value={name}
           onChange={this.handleOnChange}
           placeholder="Your Name"
           />
           <br />
 
-          <label for="languages">Programming Languages </label>
+          <label htmlFor="languages">Programming Languages </label>
           <input
             type="text"
             name="languages"
-            value={this.state.languages}
+            value={languages}
             onChange={this.handleOnChange}
             placeholder="Programming Languages"
             />
             <br />
 
-            <label for="time_zone">Your Time Zone </label>
+            <label htmlFor="time_zone">Your Time Zone </label>
             <input
               type="text"
               name="time_zone"
-              value={this.state.time_zone}
+              value={time_zone}
               onChange={this.handleOnChange}
               placeholder="Your Time Zone"
               />
               <br />
 
-              <label for="email">Your Email </label>
+              <label htmlFor="email">Your Email </label>
               <input
                 type="text"
                 name="email"
-                value={this.state.email}
+                value={email}
                 onChange={this.handleOnChange}
                 placeholder="Your Email"
                 />
@@ -83,4 +85,10 @@ class AddProgrammer extends Component {
   }
 }
 
-export default AddProgrammer;
+const mapStateToProps = state => {
+  return {
+    addProgrammerData: state.addProgrammerData
+  }
+}
+
+export default connect(mapStateToProps)(AddProgrammer);

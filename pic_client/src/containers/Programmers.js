@@ -14,11 +14,11 @@ class Programmers extends Component {
       </div>
     );
     }
-  };
+  }
 
   componentDidMount() {
-    this.props.getProgrammers();
-  };
+    this.props.getProgrammers()
+  }
 
   const mapStateToProps = (state) => {
     return ({

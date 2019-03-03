@@ -6,9 +6,11 @@ import {
 import thunk from 'redux-thunk';
 
 import programmers from './reducers/programmers';
+import addProgrammerData from './reducers/addProgrammerData';
 
 const reducers = combineReducers({
-  // programmers: programmerReducer
+  programmers,
+  addProgrammerData
 })
 
 const middleware = [thunk];
