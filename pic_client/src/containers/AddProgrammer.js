@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { updateProgrammerFormData } from '../actions/programmerForm';
+import { createProgrammer } from '../actions/programmers';
 
 class AddProgrammer extends Component {
 
@@ -17,7 +19,7 @@ class AddProgrammer extends Component {
   }
 
   render() {
-    const { name, languages, time_zone, email } = this.props.addProgrammerData
+    const { name, languages, time_zone, email } = this.props.addProgrammerData;
     return (
       <form onSubmit={this.handleOnSubmit}>
 
@@ -75,4 +77,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(AddProgrammer);
+export default connect(mapStateToProps, {
+  updateProgrammerFormData,
+  createProgrammer
+})(AddProgrammer);
