@@ -16,10 +16,10 @@ class Programmers extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch({
-      type: 'GET_PROGRAMMER_SUCCESS',
-      programmers: []
-    })
+    // this.props.dispatch({
+    //   type: 'GET_PROGRAMMER_SUCCESS',
+    //   programmers: []
+    // })
   }
 
   const mapStateToProps = (state) => {
