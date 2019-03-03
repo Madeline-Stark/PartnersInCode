@@ -2,7 +2,7 @@
 
 import ProgrammerService from '../services/ProgrammerService';
 
-import { resetProgrammerForm } from './programmerForm';
+//import { resetProgrammerForm } from './programmerForm';
 
 // const API_URL = process.env.REACT_APP_API_URL;
 
@@ -21,12 +21,12 @@ const successfullyAddProgrammer = programmer => {
   }
 }
 
-const successfullyDeleteProgrammer = programmerId => {
-  return {
-    type: "SUCCESSFUL_PROGRAMMER_DELETION",
-    programmerId
-  }
-}
+// const successfullyDeleteProgrammer = programmerId => {
+//   return {
+//     type: "SUCCESSFUL_PROGRAMMER_DELETION",
+//     programmerId
+//   }
+// }
 
 // Async actions
 
