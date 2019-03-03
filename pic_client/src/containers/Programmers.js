@@ -37,20 +37,20 @@ class Programmers extends Component {
     }
   }
 
-  export default connect(
-  state => ({
-    programmers: state.programmers,
-  }),
-  { fetchProgrammers }
-)(Programmers);
+//   export default connect(
+//   state => ({
+//     programmers: state.programmers,
+//   }),
+//   { fetchProgrammers }
+// )(Programmers);
 
 
-//   const mapStateToProps = (state) => {
-//     return ({
-//       programmers: state.programmers
-//     })
-//   }
-//
-//
-//
-// export default connect(mapStateToProps, { getProgrammers })(Programmers);
+  const mapStateToProps = (state) => {
+    return ({
+      programmers: state.programmers
+    })
+  }
+
+
+
+export default connect(mapStateToProps, { fetchProgrammers })(Programmers);
