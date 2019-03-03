@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProgrammerCard from '../components/ProgrammerCard';
 import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
+import { getProgrammers } from '../actions/programmers';
 
 class Programmers extends Component {
 
@@ -31,4 +32,4 @@ class Programmers extends Component {
 
 
 
-export default connect(mapStateToProps)(Programmers);
+export default connect(mapStateToProps, { getProgrammers })(Programmers);
