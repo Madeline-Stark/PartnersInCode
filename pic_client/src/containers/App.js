@@ -7,13 +7,6 @@ import './App.css';
 
 class App extends Component {
 
-  constructor() {
-    super()
-
-    this.state = {
-      programmers: []
-    }
-  }
 
   componentDidMount() {
     ProgrammerService.fetchProgrammers().then(programmers => this.setState({ programmers }
