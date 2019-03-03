@@ -6,8 +6,8 @@ export default (state = [], action) => {
       case 'CREATE_PROGRAMMER_SUCCESS':
         return state.concat(action.programmer);
 
-        case "SUCCESSFUL_PROGRAMMER_DELETION":
-         return state.filter(programmer => programmer.id !== action.programmerId)
+        // case "SUCCESSFUL_PROGRAMMER_DELETION":
+        //  return state.filter(programmer => programmer.id !== action.programmerId)
 
     default:
       return state;
