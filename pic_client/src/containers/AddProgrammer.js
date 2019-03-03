@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateProgrammerFormData } from '../actions/programmerForm';
+//import { updateProgrammerFormData } from '../actions/programmerForm';
 import { addProgrammer } from '../actions/programmers';
 
 class AddProgrammer extends Component {
@@ -49,7 +49,6 @@ class AddProgrammer extends Component {
   }
 
   render() {
-    const { name, languages, time_zone, email } = this.props.addProgrammerData;
     return (
       <form onSubmit={this.handleOnSubmit}>
 
@@ -59,7 +58,7 @@ class AddProgrammer extends Component {
         <input
           type="text"
           name="name"
-          value={name}
+          value={this.state.name}
           onChange={this.handleOnChange}
           placeholder="Your Name"
           />
@@ -69,7 +68,7 @@ class AddProgrammer extends Component {
           <input
             type="text"
             name="languages"
-            value={languages}
+            value={this.state.languages}
             onChange={this.handleOnChange}
             placeholder="Programming Languages"
             />
@@ -79,7 +78,7 @@ class AddProgrammer extends Component {
             <input
               type="text"
               name="time_zone"
-              value={time_zone}
+              value={this.state.time_zone}
               onChange={this.handleOnChange}
               placeholder="Your Time Zone"
               />
@@ -89,7 +88,7 @@ class AddProgrammer extends Component {
               <input
                 type="text"
                 name="email"
-                value={email}
+                value={this.state.email}
                 onChange={this.handleOnChange}
                 placeholder="Your Email"
                 />
@@ -101,13 +100,15 @@ class AddProgrammer extends Component {
   }
 }
 //need map state to props?
-const mapStateToProps = state => {
-  return {
-    addProgrammerData: state.addProgrammerData
-  }
-}
+// const mapStateToProps = state => {
+//   return {
+//     addProgrammerData: state.addProgrammerData
+//   }
+// }
+//
+// export default connect(mapStateToProps, {
+//   updateProgrammerFormData,
+//   addProgrammer
+// })(AddProgrammer);
 
-export default connect(mapStateToProps, {
-  updateProgrammerFormData,
-  addProgrammer
-})(AddProgrammer);
+export default connect(null, { addProgrammer })(AddProgrammer);

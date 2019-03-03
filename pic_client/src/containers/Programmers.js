@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
-import { getProgrammers } from '../actions/programmers';
+import { fetchProgrammers, deleteProgrammer } from '../actions/programmers';
 
 class Programmers extends Component {
 
   componentDidMount() {
-    this.props.getProgrammers()
+    this.props.fetchProgrammers()
   }
 
   render() {
-    console.log(this.props.getProgrammers())
 
     const renderProgrammers = this.props.programmers.map(programmer =>
       <div key={programmer.id}>
@@ -31,16 +30,20 @@ class Programmers extends Component {
     }
   }
 
-
-  const mapStateToProps = (state) => {
-    return ({
-      programmers: state.programmers
-    })
-  }
-
-
+  export default connect(
+  state => ({
+    programmers: state.programmers,
+  }),
+  { fetchProgrammers, deleteProgrammer }
+)(Programmers);
 
 
-
-
-export default connect(mapStateToProps, { getProgrammers })(Programmers);
+//   const mapStateToProps = (state) => {
+//     return ({
+//       programmers: state.programmers
+//     })
+//   }
+//
+//
+//
+// export default connect(mapStateToProps, { getProgrammers })(Programmers);

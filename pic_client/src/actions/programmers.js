@@ -44,7 +44,7 @@ export const addProgrammer = programmer => {
   return dispatch => {
     ProgrammerService.createProgrammer(programmer)
       .then(programmer => {
-        dispatch(successfullyAddProgrammers(programmer));
+        dispatch(successfullyAddProgrammer(programmer));
       })
       .catch(error => console.log(error));
   }
