@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
 import { fetchProgrammers, deleteProgrammer } from '../actions/programmers';
+import ProgrammerCard from '../components/ProgrammerCard';
 
 class Programmers extends Component {
 
@@ -11,22 +12,22 @@ class Programmers extends Component {
 
   render() {
 
-    const renderProgrammers = this.props.programmers.map(programmer =>
-      <p key={programmer.id}>
-        {programmer.name}
-        {programmer.languages}
-        {programmer.time_zone}
-        {programmer.email}
-        <span onClick={() => this.props.deleteProgrammer(programmer.id)}>Delete</span>
-      </p>
-      )
+    // const renderProgrammers = this.props.programmers.map(programmer =>
+    //   <p key={programmer.id}>
+    //     {programmer.name}
+    //     {programmer.languages}
+    //     {programmer.time_zone}
+    //     {programmer.email}
+    //     <span onClick={() => this.props.deleteProgrammer(programmer.id)}>Delete</span>
+    //   </p>
+    //   )
 
-      console.log(this)
+      // console.log(this)
 
     return (
-      <div>
+      <div className="ProgrammersContainer">
         <h3>Programmers Looking to Pair:</h3>
-        {renderProgrammers}
+        {this.props.programmers.map(programmer => <ProgrammerCard key={programmer.id} programmer={programmer} />)}
         <AddProgrammer />
       </div>
     );
