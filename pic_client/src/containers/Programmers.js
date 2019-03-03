@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
-import { fetchProgrammers, deleteProgrammer } from '../actions/programmers';
+import { fetchProgrammers } from '../actions/programmers';
 import ProgrammerCard from '../components/ProgrammerCard';
 
 class Programmers extends Component {
@@ -41,7 +41,7 @@ class Programmers extends Component {
   state => ({
     programmers: state.programmers,
   }),
-  { fetchProgrammers, deleteProgrammer }
+  { fetchProgrammers }
 )(Programmers);
 
 

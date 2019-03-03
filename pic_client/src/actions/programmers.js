@@ -50,15 +50,15 @@ export const addProgrammer = programmer => {
   }
 }
 
-export const deleteProgrammer = programmerId => {
-  return dispatch => {
-    ProgrammerService.deleteProgrammer(programmerId)
-      .then(response => {
-          dispatch(successfullyDeleteProgrammer(programmerId));
-      })
-      .catch(error => console.log(error));
-  }
-}
+// export const deleteProgrammer = programmerId => {
+//   return dispatch => {
+//     ProgrammerService.deleteProgrammer(programmerId)
+//       .then(response => {
+//           dispatch(successfullyDeleteProgrammer(programmerId));
+//       })
+//       .catch(error => console.log(error));
+//   }
+// }
 
 
 // export const getProgrammers = () => {
