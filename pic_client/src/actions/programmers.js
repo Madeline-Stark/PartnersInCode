@@ -1,11 +1,13 @@
 
 
+import ProgrammerService from '../services/ProgrammerService';
+
 import { resetProgrammerForm } from './programmerForm';
 
 // const API_URL = process.env.REACT_APP_API_URL;
 
 //Action creators-functions that go to reducer
-const setPogrammers = programmers => {
+const getProgrammers = programmers => {
   return {
     type: 'GET_PROGRAMMER_SUCCESS',
     programmers
@@ -19,7 +21,45 @@ const addProgrammer = programmer => {
   }
 }
 
+const deleteProgrammer = programmerId => {
+  return {
+    type: "SUCCESSFUL_PROGRAMMER_DELETION",
+    programmerId
+  }
+}
+
 // Async actions
+
+export const fetchProgrammers = () => {
+  return dispatch => {
+    ProgrammerService.fetchProgrammers()
+      .then(programmers => {
+        dispatch(getProgrammers(programmers))
+      })
+      .catch(error => console.log(error));
+  }
+}
+
+export const addProgrammer = programmer => {
+  return dispatch => {
+    ProgrammerService.createProgrammer(programmer)
+      .then(programmer => {
+        dispatch(addProgrammers(programmer));
+      })
+      .catch(error => console.log(error));
+  }
+}
+
+export const deleteProgrammer = programmerId => {
+  return dispatch => {
+    ProgrammerService.deleteProgrammer(programmerId)
+      .then(response => {
+          dispatch(deleteProgrammer(programmerId));
+      })
+      .catch(error => console.log(error));
+  }
+}
+
 
 // export const getProgrammers = () => {
 //   return dispatch => {
