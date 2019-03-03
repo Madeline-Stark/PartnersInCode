@@ -1,4 +1,5 @@
 import React from 'react';
+import { fetchProgrammers, deleteProgrammer } from '../actions/programmers';
 
 const ProgrammerCard = ({ programmer }) => (
   <div key={programmer.id} className="ProgrammerCard">
@@ -7,6 +8,7 @@ const ProgrammerCard = ({ programmer }) => (
     <p>{programmer.languages}</p>
     <p>{programmer.time_zone}</p>
     <p>{programmer.email}</p>
+    <span onClick={() => this.props.deleteProgrammer(programmer.id)}>Delete</span>
   </div>
 )
 
