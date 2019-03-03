@@ -13,6 +13,7 @@ class AddProgrammer extends Component {
       email: '',
       languages: '',
       time_zone: '',
+      img_url: '',
     }
   }
 
@@ -45,6 +46,7 @@ class AddProgrammer extends Component {
       email: '',
       languages: '',
       time_zone: '',
+      img_url: '',
     })
   }
 
@@ -93,6 +95,16 @@ class AddProgrammer extends Component {
                 placeholder="Your Email"
                 />
                 <br />
+
+                <label htmlFor="img_url">Link to a photo of you! </label>
+                <input
+                  type="text"
+                  name="img_url"
+                  value={this.state.img_url}
+                  onChange={this.handleOnChange}
+                  placeholder="Your Photo"
+                  />
+                  <br />
 
                 <input type="submit" />
       </form>
