@@ -6,6 +6,10 @@ import { getProgrammers } from '../actions/programmers';
 
 class Programmers extends Component {
 
+  componentDidMount() {
+    this.props.getProgrammers()
+  }
+
   render() {
     return (
       <div>
@@ -16,15 +20,14 @@ class Programmers extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.getProgrammers()
-  }
 
   const mapStateToProps = (state) => {
     return ({
       programmers: state.programmers
     })
   }
+
+  
 
 
 

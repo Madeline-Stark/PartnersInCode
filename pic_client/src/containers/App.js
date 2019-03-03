@@ -8,20 +8,6 @@ import './App.css';
 
 class App extends Component {
 
-
-  // componentDidMount() {
-  //   // ProgrammerService.fetchProgrammers().then(programmers => this.setState({ programmers }
-  //   this.props.getProgrammers
-  //
-  //   ))
-  // }
-
-  addProgrammer = programmer => {
-    ProgrammerService.createProgrammer(programmer).then(programmer => this.setState({
-      programmers: this.state.programmers.concat(programmer)
-    }))
-  }
-
   render() {
     return (
       <div className="App">

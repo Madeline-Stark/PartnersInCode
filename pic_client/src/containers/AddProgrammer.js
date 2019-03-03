@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class AddProgrammer extends Component {
-  // constructor(props) {
-  //   super(props)
-  //
-  //   this.state = {
-  //     name: '',
-  //     languages: '',
-  //     time_zone: '',
-  //     email: '',
-  //   };
-  // }
 
   handleOnChange = event => {
     const { name, value } = event.target; //returns element that triggered event
