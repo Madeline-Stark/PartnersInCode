@@ -5,7 +5,7 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 
-import programmers from './reducers/programmers';
+import programmers from './reducers/Programmers';
 import addProgrammerData from './reducers/addProgrammerData';
 
 const reducers = combineReducers({
