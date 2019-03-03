@@ -1,5 +1,5 @@
 class Api::ProgrammersController < ApplicationController
-before_action :set_programmer, only: [:show, :edit, :destroy]
+before_action :set_programmer, only: [:show, :update, :destroy]
 #don't need new or edit-handled on server side
 
   def index
