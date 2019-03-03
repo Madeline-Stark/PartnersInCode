@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Programmers from './Programmers';
 import './App.css';
+import About from '../components/about';
 
 
 
@@ -10,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Partners in Code</h1>
-      <p>Find your pair programming match!</p>
+      <About />
       <Programmers />
       </div>
     );
