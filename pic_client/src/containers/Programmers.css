@@ -11,6 +11,10 @@
   height: 400px;
 }
 
+.NavBar {
+  top: 0px;
+}
+
 .ProgrammerForm {
   width: 100%;
   text-align: center;
