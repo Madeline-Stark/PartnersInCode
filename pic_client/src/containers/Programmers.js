@@ -3,6 +3,7 @@ import AddProgrammer from './AddProgrammer';
 import { connect } from 'react-redux';
 import { fetchProgrammers } from '../actions/programmers';
 import ProgrammerCard from '../components/ProgrammerCard';
+import './Programmers.css';
 
 class Programmers extends Component {
 
