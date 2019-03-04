@@ -10,6 +10,7 @@ import About from '../components/about';
 import Title from '../components/title';
 import Resources from '../components/resources';
 import Footer from '../components/footer';
+import NavBar from '../components/NavBar';
 
 
 
@@ -20,6 +21,7 @@ class App extends Component {
       <Router>
       <div className="App">
         <Title />
+        <NavBar />
         <Route exact path="/" component={About} />
         <Route exact path="/programmers" component={Programmers} />
         <Route exact path="/resources" component={Resources} />
