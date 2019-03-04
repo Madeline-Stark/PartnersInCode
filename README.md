@@ -38,8 +38,12 @@ In tab two:
 ```sh
 $ cd PartnersInCode
 $ cd pic_client
+```
+Run migrations:
+```sh
 $ npm install
 ```
+
 Host on local server:
 ```sh
 $ npm start
