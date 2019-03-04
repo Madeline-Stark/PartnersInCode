@@ -4,7 +4,7 @@
 }
 
 .ProgrammerCard {
-  float: top;
+  text-align: center;
   margin: 1.5%;
   background: #e0ffff;
   width: 30%;
@@ -18,15 +18,11 @@
 }
 
 .ProgrammerForm {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 100px;
+  
 }
 
 .footer {
   width: 100%;
   text-align: right;
-  position: absolute;
   bottom: 0px;
 }

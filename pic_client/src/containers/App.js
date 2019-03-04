@@ -11,6 +11,7 @@ import Title from '../components/title';
 import Resources from '../components/resources';
 import Footer from '../components/footer';
 import NavBar from '../components/NavBar';
+import AddProgrammer from './AddProgrammer';
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
         <Route exact path="/" component={About} />
         <Route exact path="/programmers" component={Programmers} />
         <Route exact path="/resources" component={Resources} />
+        <Route exact path="/addprogrammer" component={AddProgrammer} />
         <Footer />
       </div>
     </Router>

@@ -32,7 +32,6 @@ class Programmers extends Component {
            <ProgrammerCard key={programmer.id} programmer={programmer}
            />
          )}
-        <AddProgrammer />
       </div>
     );
     }
