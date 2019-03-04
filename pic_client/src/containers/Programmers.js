@@ -16,10 +16,12 @@ class Programmers extends Component {
     return (
       <div className="ProgrammersContainer">
         <h3>Programmers Looking to Pair:</h3>
+        <div class="row">
         {this.props.programmers.map(programmer =>
            <ProgrammerCard key={programmer.id} programmer={programmer}
            />
          )}
+        </div>
       </div>
     );
     }
