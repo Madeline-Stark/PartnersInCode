@@ -52,7 +52,10 @@ class AddProgrammer extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleOnSubmit}>
+      <form
+      className="ProgrammerForm"
+      onSubmit={this.handleOnSubmit}
+      >
 
       <h3>Add Yourself to the Registry:</h3>
 
