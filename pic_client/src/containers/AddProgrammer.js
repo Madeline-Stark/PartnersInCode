@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import { updateProgrammerFormData } from '../actions/programmerForm';
 import { addProgrammer } from '../actions/programmers';
 
 class AddProgrammer extends Component {
@@ -17,13 +16,6 @@ class AddProgrammer extends Component {
     }
   }
 
-  // handleOnChange = event => {
-  //   const { name, value } = event.target; //returns element that triggered event
-  //   const currentProgrammerFormData = Object.assign({}, this.props.addProgrammerData, {
-  //     [name]: value
-  //   })
-  //   this.props.updateProgrammerFormData(currentProgrammerFormData)
-  // }
 
   handleOnChange = event => {
     const { name, value } = event.target;
@@ -32,10 +24,6 @@ class AddProgrammer extends Component {
     })
   }
 
-  // handleOnSubmit = event => {
-  //   event.preventDefault();
-  //   this.props.addProgrammer(this.props.addProgrammerData)
-  // }
 
   handleOnSubmit = event => {
     event.preventDefault();
@@ -124,5 +112,3 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   addProgrammer
 })(AddProgrammer);
-
-//export default connect(null, { addProgrammer })(AddProgrammer);
