@@ -18,11 +18,11 @@
 }
 
 .ProgrammerForm {
-  
+
 }
 
 .footer {
-  width: 100%;
-  text-align: right;
-  bottom: 0px;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
 }
