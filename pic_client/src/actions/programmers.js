@@ -23,9 +23,11 @@ const successfullyAddProgrammer = programmer => {
   }
 }
 
+//store gives access to dispatch()
+//dispatch should call a reducer, reassign the state, and render a change.
 export const fetchProgrammers = () => {
   return dispatch => {
-    dispatch(makeFetchRequest())
+    dispatch(makeFetchRequest()) //where does dispatch come from? built in?
     ProgrammerService.fetchProgrammers()
       .then(programmers => {
         dispatch(finishFetchRequest())
