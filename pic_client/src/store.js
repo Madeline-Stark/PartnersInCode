@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import programmers from './reducers/Programmers';
 import addProgrammerData from './reducers/addProgrammerData';
 
+//Redux's combineReducers() function lets us delegate different pieces of state to separate reducer functions.
 const reducers = combineReducers({
   programmers,
   addProgrammerData

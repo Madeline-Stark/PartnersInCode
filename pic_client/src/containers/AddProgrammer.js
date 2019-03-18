@@ -28,7 +28,7 @@ class AddProgrammer extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     const programmer = this.state;
-    this.props.addProgrammer(programmer)
+    this.props.addProgrammer(programmer)//state sent off to reducer via action
     this.setState({
       name: '',
       email: '',

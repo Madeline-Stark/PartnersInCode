@@ -1,5 +1,8 @@
 import React from 'react';
 import '../containers/Programmers.css';
+import LikeButton from './LikeButton.js';
+
+
 
 const ProgrammerCard = ({ programmer }) => (
   <div class="column">
@@ -9,6 +12,7 @@ const ProgrammerCard = ({ programmer }) => (
     <p>Programming Languages: {programmer.languages}</p>
     <p>Time Zone: {programmer.time_zone}</p>
     <p>Email: {programmer.email}</p>
+    <LikeButton />
   </div>
   </div>
 )

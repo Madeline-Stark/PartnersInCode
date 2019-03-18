@@ -25,11 +25,15 @@ export const fetchProgrammers = () => {
   return dispatch => {
     ProgrammerService.fetchProgrammers()
       .then(programmers => {
+        //middleware allows us to access data after retrieved
         dispatch(successfullyGetProgrammers(programmers))
+        //dispatches above action creator which store passes to reducer
+        //that returns programmers we return in action and passes to container
       })
       .catch(error => console.log(error));
   }
 }
+
 
 export const addProgrammer = programmer => {
   return dispatch => {
