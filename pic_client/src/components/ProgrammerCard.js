@@ -2,8 +2,8 @@ import React from 'react';
 import '../containers/Programmers.css';
 import LikeButton from './LikeButton.js';
 
-
-
+//here state is being passed from parent component...
+// to functional component via props
 const ProgrammerCard = ({ programmer }) => (
   <div class="column">
   <div key={programmer.id} className="ProgrammerCard">
