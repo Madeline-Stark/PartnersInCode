@@ -3,10 +3,6 @@
 Welcome to Partners In Code! You can use this app to find people to pair program with.
 ![Partners in Code](https://i.imgur.com/N1aj16Y.jpg)
 
-## Demo
-
-[Partners in Code Walkthrough](https://youtu.be/OBEtTAr_Otg)
-
 ## Installation
 
 Clone the source locally:
